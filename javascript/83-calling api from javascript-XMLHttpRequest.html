@@ -1,0 +1,74 @@
+<html>
+
+<body>
+
+</body>
+<script>
+    //event - onload(), onerror()
+    //property - response, responseText,responseType,responseURL,status, statusText
+    //function - open(),send(),setRequestHeader()
+
+    const makeRequest = (method, url, data) => {
+
+        //creating XMLHttpRequest object
+        const xhr = new XMLHttpRequest();
+
+        //open() method -> initialize
+        xhr.open(method, url);
+
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.onload = () => {
+
+            let data = xhr.response;
+            //comes as json format
+            console.log(data);
+            //JSON.parse() returns object of javascript
+            console.log(JSON.parse(data));
+        }
+
+        xhr.onerror = () => {
+            console.log("Error Exists !!!");
+        }
+
+        xhr.send(JSON.stringify(data));
+    }
+    const getData = () => {
+        makeRequest("GET", "https://jsonplaceholder.typicode.com/posts");
+    }
+    getData();
+
+    const sendData = () => {
+        makeRequest('POST', 'https://jsonplaceholder.typicode.com/posts', {
+            title: 'foo',
+            body: 'bar',
+            userId: 1,
+        });
+    }
+    sendData();
+
+    const updateData = () => {
+        makeRequest('PUT', 'https://jsonplaceholder.typicode.com/posts/1', {
+            id: 1,
+            title: 'foooooooooooooooooo',
+            body: 'barrrrrrrrrrrrrr',
+            userId: 1,
+        });
+    }
+   // updateData();
+
+    const updateSingleData = () => {
+        makeRequest('PATCH', 'https://jsonplaceholder.typicode.com/posts/1', {
+            title: 'This Is Changed',
+        });
+    }
+    updateSingleData();
+
+
+    const deleteData=()=>{
+        makeRequest('DELETE','https://jsonplaceholder.typicode.com/posts/1');
+    }
+
+    deleteData();
+</script>
+
+</html>

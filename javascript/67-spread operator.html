@@ -1,0 +1,40 @@
+<html>
+    <body>
+        
+    </body>
+    <script>
+
+        function add(x,y,z){
+            return x+y+z;
+        }
+
+        let numbers=[1,2,3];
+        console.log(add(...numbers));//spread operator or unpack kore
+
+        let numbers1=[0,0,...numbers,0,0];
+        console.log(numbers1);
+
+        let numbers2=[1,2,3];
+        let numbers3=[4,5,6];
+        let numbers4=numbers2.concat(numbers3);
+        console.log(numbers4);
+
+        //using spread operator
+        let numbers5=[1,2,3];
+        let numbers6=[4,5,6];
+        let numbers7=[...numbers5,...numbers6];
+        console.log(numbers7);
+
+        var p={
+            name:"Sadat",
+            reg:2018331099
+        }
+        var p1={
+            name:"Tanhab",
+            reg:2018331051,
+            age:23
+        }
+        var p={...p,...p1};
+        console.log(p);
+    </script>
+</html>

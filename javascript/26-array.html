@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <script>
+            // Array Declare
+            var names=new Array(); 
+            names[0] = "Sadat";
+            names[1]="Rony";
+            //names[2]=?
+            names[3]="Abir";
+            console.log(names);
+            //Array Declare
+            var names=[];
+            names.push("Sadat");
+            names.push("Reya");
+            console.log(names);
+            //shift opposite of pop
+            names.shift();
+            console.log(names);
+            //unshift opposite of push
+            names.unshift("Anwar","Karina","Mim","Alal");
+            console.log(names);
+            //spicing of the array
+            names=names.slice(0,4);
+            console.log(names);
+            //sorting alphabetically
+            names=names.sort();
+            names=names.reverse();//reversing
+            console.log(names)
+            //numbers sorting are not as alphabets
+            var nums=[1,9,2,8,3,7,4,66,5,0];
+            nums=nums.sort(function(a,b){
+                return a-b;
+            });
+            console.log(nums);
+        </script>
+    </body>
+</html>

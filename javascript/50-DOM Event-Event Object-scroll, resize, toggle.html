@@ -1,0 +1,49 @@
+<html>
+    <body style="height: 150vh;">
+        <details>
+            <summary>Sadat</summary>
+            <div style="background-color: pink;width: 150px;"><h1 style="color:green;">Love him.</h1></div>
+            <p>He is a good boy.</p>
+        </details>
+        <details>
+            <summary>Preity</summary>
+            <h1 style="color: red;">Kill her.</h1>
+            <p>She is a bad girl.</p>
+
+        </details>
+    </body>
+    <script>
+        /*
+        //load=when we load an object
+        //unload= when we unload an object or reload
+        //window= global object
+        window.addEventListener("load",func);
+        function func(){
+            console.log("this line is loaded as the window is loaded");
+        }
+        window.addEventListener("unload",function(e){
+            console.log("this line is unloaded or reloaded");
+        });
+        */
+
+       var x=0;
+       window.addEventListener("scroll",func);
+       function func(){
+        console.log("x = "+x);
+        x++;
+       }
+       
+       window.addEventListener("resize",function(){
+        console.log("resized "+x);
+        const height=window.outerHeight;
+        const width=window.outerWidth;
+        console.log(height+" "+width)
+       });
+
+       const details=document.querySelectorAll("details")[0];
+       details.addEventListener("toggle",funct);
+       function funct(e){
+        console.log(e.target.open);//returns weather true or false
+       }
+    </script>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <body>
+        
+    </body>
+    <script>
+
+        const names=["Sadat","Shampad","Sanchita"];
+        //forEach function receives another function as parameter
+        names.forEach(func);
+        function func(x){
+            console.log(x);
+        }
+        //here x=element one by one, indexx(2nd param)=index, arr(3rd param)=whole array
+        names.forEach(function(x,indexx,arr){
+            console.log(x);
+            console.log(indexx);
+            console.log(arr);
+        });
+    </script>
+</html>

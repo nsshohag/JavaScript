@@ -1,0 +1,38 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="div1" style="margin-left: 500px;">
+            <img src="images/1.jpg" alt="No Image ?" width="720px">
+            <br>
+            <button onclick="prev()" style="margin-left: 300px;margin-top: 10px;">Previous</button>
+            <button onclick="next()" >Next</button>
+        </div>
+        <script>
+            var photos=["images/1.jpg","images/2.jpg","images/3.jpg","images/4.jpg"];
+            var x=document.querySelectorAll("#div1 img")[0];
+            x.src="images/1.jpg";
+            var cnt=0;
+            function next(){
+                cnt++;
+                if(cnt>= photos.length)
+                {
+                    cnt=0;
+                    x.src = photos[cnt];
+                }
+                else
+                x.src = photos[cnt];
+            }
+            function prev(){
+                cnt--
+                if(cnt<0)
+                {
+                    cnt=photos.length-1;
+                    x.src=photos[cnt];
+                }
+                else
+                x.src=photos[cnt];
+            }
+        </script>
+    </body>
+</html>

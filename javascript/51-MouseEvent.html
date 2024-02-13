@@ -1,0 +1,55 @@
+<html>
+    <body>
+        <div style="background-color: pink;">
+            <p>Kill me.</p>
+        </div>
+    </body>
+    <script>
+        //can not be used in these tag
+        // html body meta title br style script iframe param base bdo
+        // events are 
+        // 1.onclick
+        // 2.ondbclick
+        // 3.onmousedown
+        // 4.onmouseup
+        // 5.onmouseenter
+        // 6.onmouseleave
+        // 7.onmousemove
+        // 8.onmouseover
+        const div=document.querySelector("div");
+        div.addEventListener("click",function(){
+            console.log("mouse is clicked on div");
+        });
+
+        div.addEventListener("dbclick",function(){
+            console.log("mouse is double clicked on div");
+        });
+
+        div.addEventListener("mouseup",function(){
+            console.log("mouse up on div");
+        });
+
+        div.addEventListener("mousedown",function(){
+            console.log("mouse down on div");
+        });
+
+        div.addEventListener("mouseleave",function(){
+            console.log("mouse leave on div");
+        });
+
+        div.addEventListener("mouseenter",function(){
+            console.log("mouse enter on div");
+        });
+
+        div.addEventListener("mouseover",function(){
+            console.log("mouse over on div");
+        });
+
+        div.addEventListener("mousemove",function(){
+            console.log("mouse move on div");
+        });
+
+
+
+    </script>
+</html>

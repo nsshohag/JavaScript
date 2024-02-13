@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <div id="div1" style="background-color: green;">
+            Hell.
+            <p>Para1 in 1st Div</p>
+            <p>para2 in 2nd Div</p>
+            <p>Love me.</p>
+        </div>
+        <div class="div2" style="background-color: red;">
+            <p>Para1 in 2nd Div</p>
+            <P>Para2 in 2nd Div</P>
+        </div>
+        <script>
+            //getElementById
+            //getElementsByClassName
+            //getElementsByTagName
+            //these three methods can be implemented by single method querySelector
+            //here all elements of id will be selected.
+            //1.document.querySelector("#div1").innerHTML="<h1>getElementId by querySelector</h1>";
+            //to select 1st element within id
+            //document.querySelector("#div1 p").innerHTML="Para1 in 1st Div is Changed.";
+            //to select any element(tag) within id
+            document.querySelectorAll("#div1 p")[1].innerHTML="Para2 in 1st Div is Changed.";
+            //here all elements of id will be selected.
+            //2.document.querySelector(".div2").innerHTML="<h1>getElementsByClassName by querySelector</h1>";
+            //to to select any element(tag) within class
+            document.querySelectorAll(".div2 p")[1].innerHTML="Para 2 in 2nd Div is Changed.";
+            // to select first ElementByTagName
+            //document.querySelector("p").innerHTML="Hell.";
+            //to select any element(tag) by querySelectorByTagName
+            document.querySelectorAll("p")[4].innerHTML="5th Paragraph is Changed";
+        </script>
+    </body>
+</html>

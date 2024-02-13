@@ -1,0 +1,23 @@
+<html>
+    <body>
+        
+    </body>
+    <script>
+        
+        //default parameter
+        "use strict"
+        function func(text="Default Param"){
+            console.log(text);
+        }
+        func();
+        func("Kill me.");
+
+        //rest parameter or pack kore ekta array er moddhe rakhe
+        function func(text,...texts){
+            console.log(text,texts);
+        }
+
+        func("Sadat","Rony","Abir","Preity");
+        
+    </script>
+</html>

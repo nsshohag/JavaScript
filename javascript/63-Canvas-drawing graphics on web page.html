@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <canvas id="canvas1" width="400px" height="300px"></canvas>
+    </body>
+    <script>
+
+        var c1=document.querySelector("#canvas1");
+
+         var context1=c1.getContext("2d");
+
+         context1.lineWidth=3;
+         context1.fillStyle="green";
+         context1.strokeStyle="black";
+        
+         context1.strokeRect(10,10,380,280);
+         context1.fillRect(12,12 ,376,276);
+
+         var centerX=c1.width/2;
+         var centerY=c1.height/2;
+
+         context1.beginPath();
+         context1.arc(centerX,centerY,100,2*Math.PI,false);
+         context1.fillStyle="red";
+         context1.fill();
+
+         context1.stroke();
+    </script>
+</html>

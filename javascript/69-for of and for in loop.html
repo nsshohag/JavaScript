@@ -1,0 +1,39 @@
+<html>
+    <body>
+        
+    </body>
+    <script>
+
+        //for of -> selects element one by one
+        //for in -> selects elements index or key one by one
+        var names=["Sadat","Rony","Sadat"];
+        for(let name of names){
+            console.log(name);
+        }
+
+        for(name in names){
+            console.log(name);
+        }
+
+        //for in -> selects every element key in object
+        let students={
+            name: "Sadat",
+            reg:2018331099
+        }
+
+        // error cause for of can't be used in object
+        // for(let x of students){
+        //     console.log(x);
+        // }
+
+        for(let x in students){
+            console.log(x);
+        }
+
+        for(let x in students){
+            console.log(""+x+" : "+students[x]);
+        }
+
+
+    </script>
+</html>

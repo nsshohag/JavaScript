@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            #heading1{
+                color: purple;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading1">My Name is Sadat:</h1>
+        <div style="background-color: green;">
+            <script>
+                //changing the element by accessing
+                // as id is used by one element so no [] is present
+            document.getElementById("heading1").innerHTML="Kill me";
+            var x=document.getElementById("heading1");
+            x.innerHTML=("Selected and Changed First Time.");
+            </script>
+            <p>Kill me please.</p>
+        </div>
+        <div id="div2" style="background-color: red;">
+            <script>
+                //changing the element by accessing
+                // as id is used by one element so no [] is present
+            document.getElementById("heading1").innerHTML="Selected and Changed Second Time";
+            </script>
+            <p>Kill me twice please.</p>
+            <p>Paragraph 2 in Div2</p>
+        </div>
+        <script>
+            //changing the element by tagname.Here [] is present
+            document.getElementsByTagName("p")[0].innerHTML=("First paragraph's 'kill me' is changed.");
+            //here whole elements are reset and innerhtml are written to '?'
+            document.getElementById("div2").innerHTML="?";
+        </script>
+    </body>
+</html>

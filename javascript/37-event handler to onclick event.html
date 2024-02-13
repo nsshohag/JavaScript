@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <button onclick="alert('Button is clicked.')">Button</button>
+        <button onclick="func1()">Button1</button>
+        <br>
+        <button onclick="func()" style="background-color: red;margin-top: 10px;";>ButtonToChangeParagraph</button>
+        <script>
+            function func1(){
+                alert("Alert Through Function for Button1");
+                document.querySelectorAll("p")[0].innerHTML="Paragraph is changed for Button 1";
+            }
+            function func(){
+                document.querySelectorAll("p")[0].innerHTML="Paragraph is changed for ButtonToChangeParagraph";
+            }
+            function funcp(){
+                alert("Alert for Clicking in the Paragraph through function");
+            }
+            var x=document.querySelectorAll("#image_id1");
+        </script>
+        <br>
+        <p onclick="funcp()">Button? Click and See What Happens?</p>
+    </body>
+</html>

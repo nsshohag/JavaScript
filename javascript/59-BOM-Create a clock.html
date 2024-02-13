@@ -1,0 +1,25 @@
+<html>
+    <body>
+    </body>
+    <script>
+        function clockx(){
+            var date=new Date();
+            var hours=date.getHours();
+            var minutes=date.getMinutes();
+            var seconds=date.getSeconds();
+            var time = hours+" : "+minutes+" : "+seconds;
+            
+            console.log(time);
+        }
+        //clockx();
+        setInterval(f,1000);
+        function f()
+        {
+            clockx();
+        }
+        setInterval(ff,6000);
+        function ff(){
+            console.clear();
+        }
+    </script>
+</html>

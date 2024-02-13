@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <video controls muted style="margin-left:500px;" width="50%">
+            <source src="songs/Srotoshini.mp4" type="video/mp4">
+            your browser doesn't support html element
+        </video>
+    </body>
+    <script>
+        const videox=document.querySelector("video");
+        
+
+        videox.addEventListener("canplay",func);
+        function func(){
+            console.log("canplay");
+        }
+        
+        videox.addEventListener("play",func1);
+        function func1(){
+            console.log("the play is clicked.");
+        }
+        
+        videox.addEventListener("playing",function(){
+            console.log("playing now");
+        });
+        
+        videox.addEventListener("pause",func3);
+        function func3(){
+            console.log("the pause is clicked");
+        }
+        videox.addEventListener("ended",function(){
+            console.log("The Song Has Ended");
+        })
+
+        videox.addEventListener("volumechange",function(){
+            console.log("volume is changed");
+        })
+
+
+    </script>
+</html>

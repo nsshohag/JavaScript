@@ -1,0 +1,47 @@
+{
+    "cse18": [
+        {
+            "name": "Nazmus Sadat",
+            "middlename": "Sadat",
+            "age": 23,
+            "cgpa": 2.99,
+            "male": true,
+            "language": [
+                "Bangla",
+                "English"
+            ],
+            "frineds": [
+                {
+                    "Name": "Preity",
+                    "reg": 2018331008
+                },
+                {
+                    "Name": "Rony",
+                    "reg": 2018331053
+                }
+            ]
+        },
+        {
+            "name": "Abir",
+            "middlename": "Fuad",
+            "age": 23,
+            "cgpa": 3.99,
+            "male": true,
+            "language": [
+                "Bangla",
+                "English",
+                "Hindi"
+            ],
+            "frineds": [
+                {
+                    "Name": "Shohan",
+                    "reg": 2018331067
+                },
+                {
+                    "Name": "Anwar",
+                    "reg": 2018331020
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+        </style>
+    </head>
+    <body>
+        <h1>BOM</h1>
+        <div class="location-div">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <br>
+        <button style="color: blue;background-color:red">Click This Button To Enter Google Scholar</button>
+    </body>
+    <script>
+        //BOM(Browser Object Model)
+        //window object
+        //location object
+
+        console.log(window);
+        console.log(window.document);
+        console.log(document);
+        console.log(location);
+        //href
+        console.log(location.href);
+
+        //protocol
+        console.log(location.protocol);
+
+        //hostname
+        console.log(location.hostname);
+
+        //port
+        console.log(location.port);
+
+        //pathname
+        console.log(location.pathname);
+
+        var locationDiv=document.querySelector(".location-div");
+        var p1=locationDiv.children[0];
+        p1.textContent=location.href;//p1.innerHTML=location.href;
+
+        var p2=locationDiv.children[1];
+        p2.innerHTML=window.location.port;
+
+        var bt=document.querySelector("button");
+        bt.addEventListener("click",function(){
+            location.assign("https://scholar.google.com/");
+        });
+
+    </script>
+</html>

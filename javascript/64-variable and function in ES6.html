@@ -1,0 +1,35 @@
+<html>
+    <body>
+        
+    </body>
+    <script>
+        //var works in outside block
+        var x=0;
+        if(true){
+           x=1;
+        }
+        console.log(x);
+
+        //let works within block
+        if(true){
+            let x=5;
+            console.log(x);
+        }
+        console.log(x);
+
+        //here const value can't be changed
+        const y=1;
+        if(true){
+            //y=10; here const value can't be changed
+        }
+        console.log(y);
+
+        //ES6
+        let a=1,b=2;
+        let sum=a+b;
+        var name="Sadat";
+        console.log(`${name}'s Sum of ${a} and ${b} is: ${sum}`);
+
+
+    </script>
+</html>

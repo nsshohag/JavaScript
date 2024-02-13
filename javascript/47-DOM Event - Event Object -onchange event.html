@@ -1,0 +1,75 @@
+<html>
+    <body>
+        <label for="name">Name:
+            <input class="class1" type="text" name="name">
+        </label>
+        
+        <br>
+
+        
+        <div>
+            <h1>Programming Language</h1>
+            <label for="program">
+                <input type="checkbox" name="program" id="" value="c">C
+            </label>
+            <br>
+            <label for="program">
+                <input type="checkbox" name="program" id="" value="java">Java
+            </label>
+        </div>
+        <br>
+        <label>Department:</label>
+        <select name="department" id="dept">
+            <option value="cse">Computer Science and Engineering</option>
+            <option value="eee">Electrical and Electronics Engineering</option>
+            <option value="ganja" selected>Ganja Khaiya Kul Paina Abr Porashuna</option>
+        </select>
+    
+
+    </body>
+    <script>
+//onchange event 
+//change event can be used here
+//<input/>-text,number,password,email,color,radio,checkbox,search,time,date,datetime,week,month,url,tel,file
+//<select>
+//<textarea>
+    const input=document.querySelectorAll("input")[0];
+    //event = onchange but EventListener e amra change dei
+    input.addEventListener("change",changeX);
+    function changeX(e){
+        console.log("Changed");
+        console.log(e);
+        console.log(e.type);
+        //e.target=event ta kon element ke target korche ta dekhay
+        console.log(e.target);
+        //e.target.className
+        console.log(e.target.className);
+        //e.target.id=to find id
+        //e.target.value=value dibe
+        console.log(e.target.value);
+
+    }
+
+    //onchnage eventwith addListener with checkboxes
+    const x=document.querySelectorAll("input[name=program]");
+    console.log(x);
+    // to change NodeList to Array =Array.from 
+    Array.from(x).map(x=>{
+        x.addEventListener("change",func);
+        function func(ee){
+            var temp=ee.target.value;
+            if(ee.target.checked)
+            console.log(temp+" item is selected");
+        }
+    });
+    
+    //onchnage event select or dropdown menu
+    const dept=document.querySelectorAll("select")[0];
+    const dept1=document.querySelector("#dept");
+    dept.addEventListener("change",funcl);
+    function funcl(e){
+        console.log(e.target.value);
+    }
+    
+    </script>
+</html>

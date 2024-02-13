@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            .aclass{
+                color: red;
+                font-size: 53px;
+                font-weight: bold;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="p1">Love me.</p>
+        <button onclick="addStyle()">AddStyle</button>
+        <br>
+        <br>
+        <button onclick="removeStyle()">RemoveStyle</button>
+    </body>
+    <script>  
+        var temp=document.querySelector("#p1");
+        function addStyle(){
+            temp.classList.add("aclass");
+        }
+        function removeStyle(){
+            temp.classList.remove("aclass");
+        }
+    </script>
+</html>

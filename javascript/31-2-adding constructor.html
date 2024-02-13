@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <script>
+            //constructor
+            function Student(name,cgpa,language){
+                this.name=name;
+                this.cgpa=cgpa;
+                this.language=language;
+                //creating function
+                this.func=function(){
+                    console.log(this.name);
+                    console.log(this.cgpa);
+                }
+            }
+            //create an object
+            var student1=new Student("Sadat",2.99,["Bangla","English"]);
+            var student2=new Student("Preity",3.88,["Bangla","English"]);
+            var student3=new Student("Abir",4.00,["Bangla","English"]);
+            //console.log(student1.cgpa);
+            //console.log(student2.cgpa);
+            //console.log(student3.cgpa);
+            //accessing via function within constructor
+            student1.func();
+            student2.func();
+            student3.func();
+        </script>
+    </body>
+</html>

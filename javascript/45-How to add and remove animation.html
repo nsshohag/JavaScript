@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            .anim{
+                box-shadow: 0 15px 18px 0 green;
+                opacity: .5;
+            }
+        </style>
+    </head>
+    <body>
+        <button style="margin-left: 850px;margin-top:100px;color: red;background-color: pink;font-size: larger;font-weight: bold;font-style: italic;">Button</button>
+    </body>
+    <script>
+        document.querySelectorAll("button")[0].addEventListener("click",func);
+        function func(){
+            //select the button element
+            var x=document.querySelectorAll("button")[0];
+            x.classList.add("anim");
+            //function to handle time duration of animation
+            //setTimeout(handlerfunc,time);
+            setTimeout(function(){
+                x.classList.remove("anim");
+            },100);
+        }
+    </script>
+</html>

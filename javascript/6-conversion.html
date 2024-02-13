@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <script>
+            var num=10,str="1010.10",flt=1010.5678;
+            num=toString(num);
+            str=parseFloat(str);
+            //document.write(str) what the fuck is wrong ? Cause Writing Float Data Type to html element
+            console.log(str);
+            document.write(typeof(num));
+            document.write("<br>");
+            document.write(typeof(str));
+            document.write("<br>");
+            document.write(flt.toFixed(1)+"<br>");
+            document.write(flt.toFixed(2)+"<br>");
+            //guess the difference
+            document.write(flt.toPrecision(5)+"<br>")
+            document.write(flt.toPrecision(6)+"<br>")
+            //string,boolean to number
+            //string,boolean->number
+            var x,y="1.1";
+            x=Number(y);
+            document.write(x)
+        </script>
+    </body>
+</html>

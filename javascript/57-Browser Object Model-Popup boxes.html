@@ -1,0 +1,44 @@
+<html>
+    <body>
+    </body>
+    <script>
+        //js BOM-PopUp Boxes
+        //alert,confirm,prompt(PopUp Boxes)
+        alert("This is a alert.");
+        confirm("This a confirmation that you are atheist ?");
+        // here prompt takes everything as string
+        
+        var reg=prompt("Give your registration number ?");
+        var registration=parseInt(reg);
+        
+        if(reg == null || reg == " ")
+          console.log("No registration found.");
+        else
+        console.log("Your registration number is : "+registration);
+
+        
+        function deleteFunc(){
+            // here confirm returns true or false and stored in var value
+            var value=confirm("Do you want to delete ?");
+            if(value){// returns true or false
+                console.log("deleted");
+            }
+            else
+            console.log("aborted");
+        }
+        
+        
+        deleteFunc();
+        
+        
+        
+        var h1=document.createElement("h1");
+        var child=document.createTextNode("Your registration number is : "+registration);
+        h1.appendChild(child);
+        document.body.appendChild(h1);
+        h1.style.color="red";
+        h1.style.textDecoration="underline";
+
+
+    </script>
+</html>

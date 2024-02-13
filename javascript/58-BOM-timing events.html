@@ -1,0 +1,33 @@
+<html>
+    <body>
+        
+    </body>
+    <script>
+        // JS BOM
+        // JS Timing events methods
+        // setTimeOut() ,setInterval()
+        // setTimeOut will work after a certain period of time
+        // setInterval will repeat after a certain period of time
+        // here is two parameter first one is function second one is time
+        //here in this case annonymous function is passed and time in passed in ms
+        setTimeout(()=>{         
+            console.log("Kill me after 3000 ms");           
+        },3000);
+        
+        function func(){
+            console.log("Kill me after 5000 ms");
+        }
+        
+        //here in this case user function is passed
+        setTimeout(func,5000);
+
+        //
+        setInterval(funcx,1000);
+        time=0;
+        function funcx(){
+            console.log("setInterval is in loop for interval 1000ms and time "+time+" s");
+            time++;
+        }
+
+    </script>
+</html>

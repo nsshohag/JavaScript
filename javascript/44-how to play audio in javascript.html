@@ -1,0 +1,44 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button style=" margin-left: 90px">Play A Song</button>
+        <br>
+        <button style="background-color: green; margin-left: 90px;margin-top: 20px;">play</button>
+        <button style="background-color: red;margin-left: 10px;">pause</button>
+        <br>
+        <br>
+        <audio id="sadat" controls src="songs/Srotoshini.mp3" type="audio/mp3"></audio>
+
+    </body>
+    <script>
+        var audio1=new Audio("songs/Srotoshini.mp3");
+        //by eventlistener and for loop
+        //without first button so i=1
+        document.querySelectorAll("button")[0].addEventListener("click",funcx);
+        function funcx(){
+            audio1.play();
+        }
+        function func(){
+        }
+        for(var i=1;i<3;i++)
+        {
+            document.querySelectorAll("button")[i].addEventListener("click",func);
+            function func(){
+                var text=this.innerHTML;
+                if(text=="play")
+                {
+                    audio1.play();
+                }
+                if(text=="pause")
+                {
+                    audio1.pause();
+                }
+            }
+        }
+    </script>
+</html>

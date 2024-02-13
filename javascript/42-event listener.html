@@ -1,0 +1,37 @@
+<html>
+    <body>
+        <div id="div1">
+            <p>Take the mouse over this paragraph and see what happens.</p>
+        </div>
+        <button>Button</button>
+    </body>
+    <script>
+
+        var x=document.querySelector("button");
+        //1st param=za hole, 2nd param=za hobe obossoi () and "" chara function
+        x.addEventListener("click",func);
+        function func(){
+            alert("Button Clicked Then This Alert Is Shown");
+        }
+
+        y=document.querySelectorAll("#div1 p")[0];
+        y.addEventListener("mouseover",funcmouseover);
+        y.addEventListener("mouseout",funcmouseout);
+
+        function funcmouseover(){
+            y.innerHTML="This para is changed as Mouse is Over The para";
+            y.style.color="red";
+            y.style.fontSize="53px";
+            y.style.fontWeight="bold";
+            y.style.fontStyle="italic";
+        }
+        
+        function funcmouseout(){
+            y.innerHTML="This para is changed as Mouse is Out The para";
+            y.style.color="green";
+            y.style.fontSize="53px";
+            y.style.fontWeight="bold";
+            y.style.fontStyle="italic";
+        }
+    </script>
+</html>

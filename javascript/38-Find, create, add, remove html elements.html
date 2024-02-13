@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <a href="#">Sadat'sFaceBook</a>
+        <div id="div1" style="background-color: red;">
+            <p>1st Paragraph</p>
+            <p>2nd Paragraph</p>
+        </div>
+        <script>
+            //1.find/get=getElements
+
+            //2.change elements
+            var x=document.getElementsByTagName("a")[0];
+            x.innerHTML=("Sadat'sFB");
+            x.style.textDecoration=("none");
+            x.style.color="red";
+            x.style.fontSize="20px";
+            var y=document.getElementsByTagName("p")[1];
+            y.innerText="2nd Paragraph is Changed";
+            y.style.color="green";
+
+            //3.create html elements
+            var z=document.createElement("p");
+            var child=document.createTextNode("Created new paragraph(html element)");
+            z.appendChild(child);
+            z.style.color="yellow";
+            var divx=document.getElementById("div1");
+            divx.appendChild(z);
+
+            //4.remove elements
+            var para1=document.getElementsByTagName("p")[0];
+            divx.removeChild(para1);
+
+            //5.insert at top
+            var para1=document.createElement("p");
+            var child=document.createTextNode("Deleted Para1 is Inserted at Top");
+            para1.appendChild(child);
+            //(1stparam=element,2ndparam=beforewhichelement)
+            divx.insertBefore(para1,y);
+
+        </script>
+    </body>
+</html>

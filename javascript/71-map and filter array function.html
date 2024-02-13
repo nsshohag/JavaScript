@@ -1,0 +1,22 @@
+<html>
+    <body>
+        
+    </body>
+    <script>
+        var names=["A","B","C"];
+        // here map function returns an array
+        var arr=names.map(func);
+        function func(x){
+            return x+x;// here returns elements of array consecutively
+        }
+        console.log(names);
+        console.log(arr);
+
+        //filter function filters the elements of array according to conditon
+        var x=names.filter(func);
+        function func(x){
+            return x=="A"||x=="B";//here returns only the element of array of fullfilled condition
+        }
+        console.log(x);
+    </script>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <p style="font-weight: bold;font-style: italic;font-size: larger;color: red;">Press Any Key</p>
+        <p>Number of pressing</p>
+    </body>
+    <script>
+        document.addEventListener("keypress",func);
+        var x=document.querySelectorAll("p")[0];
+        var x1=document.querySelectorAll("p")[1];
+        var cnt=0
+        function func(){
+            cnt++;
+            var text=event.key;
+            x.innerHTML="you have pressed "+text;
+            x1.innerHTML="you have pressed keyboard "+cnt+" times";
+        }
+    </script>
+</html>

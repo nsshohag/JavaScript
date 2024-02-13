@@ -1,0 +1,56 @@
+<html>
+    <body>
+        <form action="">
+            <div>
+                <label for="name">Name:</label>
+                <input id="name" style="margin-left: 30px;" type="text" required autofocus>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email:</label>
+                <input id="email" style="margin-left: 30px;" type="email" required>
+            </div>
+            <br>
+            <div>
+                <label for="password">Password:</label>
+                <input id="password" style="margin-left: 8px;" type="password" minlength="3" maxlength="7" required>
+            </div>
+            <br>
+            <div>
+                <input style="margin-left: 100px;" type="submit" value="signup">
+            </div>
+        </form>
+
+
+    </body>
+    <script>
+        const form=document.querySelector("form");
+        const name=form.querySelector("div #name");
+        const email=form.querySelector("div #email");
+        const password=form.querySelector("div #password");
+
+        form.addEventListener("submit",func);
+        function func(e){
+            //to prevent autorefreshing
+            e.preventDefault();
+            console.log("submit");
+            console.log(name.value);
+            console.log(email.value);
+            console.log(password.value);
+
+            //to send data in backend we send it as object
+            //let's create a object
+            const userInfo = {
+                namex: name.value,
+                emailx: email.value,
+                passwordx: password.value,
+
+            };
+            console.log(userInfo); // Shows As Object
+            //clear the input value in the webpage field
+            name.value="love me";
+            email.value="or kill me";
+            password.value="bitch";
+        }
+    </script>
+</html>
